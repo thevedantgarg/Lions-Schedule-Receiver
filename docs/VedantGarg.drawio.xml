@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="fgP4TVzB5f1gY0Ix994u">
+    <mxGraphModel dx="1943" dy="994" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G25AZ4HCazkAMSyL6glv-18" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="start run ./lions.sh" vertex="1">
+          <mxGeometry height="80" width="120" x="100" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-19" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Send curl request to ESPN Lions schedule endpoint" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-3" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Request succeeded and JSON returned?" vertex="1">
+          <mxGeometry height="80" width="170" x="75" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Print API error message" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-27" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Parse games with jq (date + opponent for each)" vertex="1">
+          <mxGeometry height="60" width="120" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-28" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Compare each game’s date to the current time" vertex="1">
+          <mxGeometry height="60" width="120" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-29" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-30" connectable="0" parent="G25AZ4HCazkAMSyL6glv-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="No" vertex="1">
+          <mxGeometry relative="1" x="0.1851" y="-1" as="geometry">
+            <mxPoint x="-14" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-31" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-32" connectable="0" parent="G25AZ4HCazkAMSyL6glv-31" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.4408" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;span style=&quot;text-decoration-line: inherit; background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Upcoming game found?&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="130" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Print &quot;No upcoming game found&quot;" vertex="1">
+          <mxGeometry height="60" width="120" x="170" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="End program" vertex="1">
+          <mxGeometry height="80" width="120" x="590" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-33" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Extract next game’s opponent, date, and kickoff time" vertex="1">
+          <mxGeometry height="60" width="120" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-34" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="G25AZ4HCazkAMSyL6glv-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Convert kickoff from UTC to local time with date" vertex="1">
+          <mxGeometry height="60" width="120" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Print next game to terminal" vertex="1">
+          <mxGeometry height="40" width="280" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-22" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-3" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="G25AZ4HCazkAMSyL6glv-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="420" as="sourcePoint" />
+            <mxPoint x="310" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-23" connectable="0" parent="G25AZ4HCazkAMSyL6glv-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="0.0541" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-24" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-3" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="G25AZ4HCazkAMSyL6glv-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="420" as="sourcePoint" />
+            <mxPoint x="310" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-25" connectable="0" parent="G25AZ4HCazkAMSyL6glv-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="No" vertex="1">
+          <mxGeometry relative="1" x="-0.1857" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-26" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-4" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.067;entryY=0.271;entryDx=0;entryDy=0;entryPerimeter=0;" target="G25AZ4HCazkAMSyL6glv-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="420" as="sourcePoint" />
+            <mxPoint x="310" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-35" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-13" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.924;exitY=0.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.289;entryY=0.972;entryDx=0;entryDy=0;entryPerimeter=0;" target="G25AZ4HCazkAMSyL6glv-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="900" as="sourcePoint" />
+            <mxPoint x="310" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G25AZ4HCazkAMSyL6glv-36" edge="1" parent="1" source="G25AZ4HCazkAMSyL6glv-9" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.044;entryY=0.605;entryDx=0;entryDy=0;entryPerimeter=0;" target="G25AZ4HCazkAMSyL6glv-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="260" y="700" as="sourcePoint" />
+            <mxPoint x="310" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
